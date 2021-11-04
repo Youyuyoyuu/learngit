@@ -16,7 +16,7 @@
 
 > 1. 编写一个文件readme.txt
 >
-> 2. `git add file`把文件添加到仓库
+> 2. `git add file_name`把文件添加到仓库
 >
 > 3. `git commit -m 'explanation'`把文件提交到仓库，并添加说明
 >
@@ -72,22 +72,22 @@ git管理的是修改
 
 仅提交了第一次修改
 
-`git diff HEAD -- file`查看工作区和仓库最新版本的差别
+`git diff HEAD -- file_name`查看工作区和仓库最新版本的差别
 
 
 
 ## 2.5 撤销修改
 
-`git checkout -- file`撤销文件在工作区的全部修改，使之退回到最后一次add或commit的状态
+`git checkout -- file_name`撤销文件在工作区的全部修改，使之退回到最后一次add或commit的状态
 
-`git reset HEAD file`把暂存区的修改回退到工作区
+`git reset HEAD file_name`把暂存区的修改回退到工作区
 
 
 
 ## 2.6 删除文件
 
-> 1. `rm file`删除文件
-> 2. `git rm file`从版本库中删除文件
+> 1. `rm file_name`删除文件
+> 2. `git rm file_name`从版本库中删除文件
 > 3. `git commit -m 'explanation'`提交至仓库
 
 `git checkout -- file`把误删的文件恢复到仓库最新版本（其实就是用仓库里的最新版本替换工作区的版本）
@@ -134,3 +134,6 @@ git管理的是修改
 
 
 
+## 4.1 创建与合并分支
+
+> 1. 创建分支。
