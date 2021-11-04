@@ -136,4 +136,10 @@ git管理的是修改
 
 ## 4.1 创建与合并分支
 
-> 1. 创建分支。
+> 1. 创建并切换到分支。`git switch -c branch_name`
+> 2. 修改后添加并提交，方法同**1.2**
+> 3. 切换回master分支。`git switch master`
+> 4. 把新分支修改的内容合并到master分支上。`git merge branch_name`
+> 5. 删除新分支。`git branch -d dev`
+
+`git branch`查看当前分支
