@@ -18,7 +18,7 @@
 >
 > 2. `git add file_name`把文件添加到仓库
 >
-> 3. `git commit -m 'explanation'`把文件提交到仓库，并添加说明
+> 3. `git commit -m 'description'`把文件提交到仓库，并添加说明
 >
 >    （可多次add，仅需一次commit）
 
@@ -144,6 +144,8 @@ git管理的是修改
 
 `git branch`查看当前分支
 
+*注意：merge是将目标分支内容合并到当前分支*
+
 
 
 ## 4.2 解决冲突
@@ -159,3 +161,8 @@ git管理的是修改
 
 
 
+## 4.3 分支管理
+
+在分支冲突的情况下，仍然可以直接进行合并
+
+`git merge --no-ff -m 'description' branch_name`直接将目标分支合并到当前分支，`--no-ff`表示禁用快速合并，合并同时会创建一个新的提交，故需要描述
