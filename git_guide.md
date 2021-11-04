@@ -115,7 +115,7 @@ git管理的是修改
 >
 > 3. 将本地库的内容推送到远程库上。`git push -u origin master`。第一次使用时会出现SSH警告。
 
-`git push origin master`此后本地推送至GitHub
+`git push origin master`此后将本地库推送至GitHub
 
 `git remote -v`查看远程库信息
 
