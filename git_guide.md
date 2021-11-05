@@ -179,3 +179,15 @@ git管理的是修改
 > 2. 恢复当前工作并删除stash。`git stash pop`
 >    1. 多次stash后，可先用`git stash list`查看
 >    2. 恢复指定stash。`git stash apply stash@{stssh_number}`
+>    3. 删除stash。`git stash drop`
+
+现在可在Bug分支上修复Bug
+
+> 1. 切换至出现Bug的分支。`git switch branch_name`
+> 2. 创建临时的Bug分支。`git switch -c bug_branch`
+> 3. 修改后添加并提交，方法同**1.2**
+> 4. 切换回出现Bug的分支。
+> 5. 完成合并。`git merge --no-ff -m 'description' bug_branch`
+
+若出现Bug的分支另有一分支也有同样的Bug，可用`git cherry-pick commit_id`，将指定提交复制到当前分支（也就是另一个同Bug分支），`commit_id`由之前提交时提供。
+
