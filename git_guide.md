@@ -166,3 +166,16 @@ git管理的是修改
 在分支冲突的情况下，仍然可以直接进行合并
 
 `git merge --no-ff -m 'description' branch_name`直接将目标分支合并到当前分支，`--no-ff`表示禁用快速合并，合并同时会创建一个新的提交，故需要描述
+
+
+
+## 4.4 Bug分支
+
+修复分支上的Bug时，可单独创建一个新的Bug分支
+
+但在修复前，还需将当前工作储存
+
+> 1. 储存当前工作。`git stash`
+> 2. 恢复当前工作并删除stash。`git stash pop`
+>    1. 多次stash后，可先用`git stash list`查看
+>    2. 恢复指定stash。`git stash apply stash@{stssh_number}`
