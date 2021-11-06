@@ -217,5 +217,29 @@ git管理的是修改
 > 3. 合并前解决冲突，方法同**1.2**
 > 4. 推送到远程库。`git push origin branch_name`
 
+还可考虑使用`git rebase`来简化分支合并图
 
+
+
+# 5.标签管理
+
+
+
+## 5.1 创建标签
+
+> 1. 切换至需要打标签的分支。`git switch branch_name`
+>
+> 2. 打标签。`git tag tag_name`。默认打在最新提交的commit上，若要给之前的commit打标签，需找到之前的commit_id
+>
+>    1. 简要显示commit_id和description`git log --pretty=online --abbrev-commit`
+>
+>    2. 打标签。`git tag tag_name commit_id`
+>
+>       打带说明的标签。`git tag -a tag_name -m 'description' commit_id`
+>
+> 3. 查看标签。`git tag`
+>
+>    查看标签信息。`git show tag_name`
+
+*注意：标签为指向commit的指针，所以可能存在于多个分支*
 
