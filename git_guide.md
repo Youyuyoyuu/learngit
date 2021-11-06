@@ -191,3 +191,16 @@ git管理的是修改
 
 若出现Bug的分支另有一分支也有同样的Bug，可用`git cherry-pick commit_id`，将指定提交复制到当前分支（也就是另一个同Bug分支），`commit_id`由之前提交时提供。
 
+
+
+## 4.5 Feature分支
+
+增加新功能时，可新建一个Feature分支，步骤类似Bug分支
+
+> 1. `git switch -c feature_branch`
+> 2. `git add feature_file`
+> 3. `git commit -m 'description'`
+> 4. `git switch branch_name`
+
+若还未合并时准备放弃新功能，可用`git branch -D feature_branch`
+
