@@ -204,3 +204,18 @@ git管理的是修改
 
 若还未合并时准备放弃新功能，可用`git branch -D feature_branch`
 
+
+
+## 4.6 多人协作
+
+`git push origin branch_name`推送本地分支至远程
+
+若他人早于自己推送，导致远程库与你的本地库存在冲突
+
+> 1. 指定本地分支与远程之间的链接。`git branch --set-upstream-to=origin/branch_name branch_name`
+> 2. 将新的提交抓取下来。`git pull`
+> 3. 合并前解决冲突，方法同**1.2**
+> 4. 推送到远程库。`git push origin branch_name`
+
+
+
