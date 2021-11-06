@@ -243,3 +243,15 @@ git管理的是修改
 
 *注意：标签为指向commit的指针，所以可能存在于多个分支*
 
+
+
+## 5.2 操作标签
+
+`git tag -d tag_name`删除标签
+
+`git push origin :refs/tags/tag_name`远程删除标签，本地需先删除
+
+`git push origin tag_name`推送标签至远程
+
+`git push origin --tage`一次性推送全部未推送的标签
+
